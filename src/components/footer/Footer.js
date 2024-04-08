@@ -14,7 +14,7 @@ const Footer = () => {
     <footer className="  py-4">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
         <div className="">
-          <img src={logo} alt="Footer Logo" className="h-20 " />
+          <img src={logo} alt="Footer Logo" className="h-24 w-72 " />
           <p>We Provide Best Food with diffrent catogeries</p>
         </div>
         <div className="flex flex-col  space-y-4 md:space-y-0 md:space-x-4 md:items-center mb-4 gap-4">
