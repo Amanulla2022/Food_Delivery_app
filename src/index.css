@@ -5,3 +5,7 @@
 .list-item {
   @apply cursor-pointer hover:text-green-500;
 }
+
+.header-2 {
+  @apply text-3xl underline mb-4 font-bold;
+}

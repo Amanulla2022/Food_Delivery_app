@@ -13,6 +13,7 @@ export const menuItem = [
     imgSrc:
       "https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg",
   },
+
   {
     id: 3,
     itemId: "hotdog01",
@@ -40,5 +41,30 @@ export const menuItem = [
     name: "Drink",
     imgSrc:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKnAaixb3BEgRkDPSiPXWcqxopK6vkM9eqfw17qfXXxw&s",
+  },
+  {
+    id: 7,
+    itemId: "beef01",
+    name: "Beef",
+    imgSrc: "https://www.themealdb.com/images/category/beef.png",
+  },
+  {
+    id: 8,
+    itemId: "chicken01",
+    name: "Chicken",
+    imgSrc: "https://www.themealdb.com/images/category/chicken.png",
+  },
+  {
+    id: 9,
+    itemId: "dessert01",
+    name: "Dessert",
+    imgSrc: "https://www.themealdb.com/images/category/dessert.png",
+  },
+
+  {
+    id: 10,
+    itemId: "indian01",
+    name: "Indian",
+    imgSrc: "https://www.themealdb.com/images/category/vegetarian.png",
   },
 ];
