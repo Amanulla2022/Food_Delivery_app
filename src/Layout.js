@@ -6,6 +6,8 @@ import Home from "./pages/home/Home";
 import Categories from "./pages/categories/Categories";
 import SignIn from "./pages/signIn/SignIn";
 import SignUp from "./pages/signUp/SignUp";
+import Cart from "./pages/cart/Cart";
+import OrderDetails from "./pages/order/OrderDetails";
 
 const Layout = () => {
   return (
@@ -16,6 +18,8 @@ const Layout = () => {
         <Route path="/categories" element={<Categories />}></Route>
         <Route path="/signin" element={<SignIn />}></Route>
         <Route path="/signup" element={<SignUp />}></Route>
+        <Route path="/cart" element={<Cart />}></Route>
+        <Route path="/order" element={<OrderDetails />}></Route>
       </Routes>
       <Footer />
     </Router>

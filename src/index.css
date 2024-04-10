@@ -9,3 +9,11 @@
 .header-2 {
   @apply text-3xl underline mb-4 font-bold;
 }
+
+.order-input {
+  @apply flex gap-4;
+}
+
+.proceed-btn {
+  @apply flex items-center justify-center align-middle gap-4 bg-green-500 text-white text-xl font-bold w-full p-2 my-4;
+}
