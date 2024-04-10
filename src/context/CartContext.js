@@ -24,7 +24,7 @@ export const CartProvider = ({ children }) => {
   const getTotalItemCount = () => {
     const totalCount = cart.reduce((total, item) => {
       const quantity = parseInt(item.quantity, 10);
-      console.log(item.quantity, quantity); // Log quantity and its parsed value
+      console.log(item.quantity, quantity);
       return (total += quantity);
     }, 0);
     return totalCount;
