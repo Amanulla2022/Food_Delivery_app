@@ -65,7 +65,6 @@ const Header = () => {
               <Link to="/order" className="list-item">
                 Orders
               </Link>
-              <li className="list-item">Contact</li>
             </ul>
           </nav>
         </div>
