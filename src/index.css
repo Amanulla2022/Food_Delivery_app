@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .list-item {
-  @apply cursor-pointer hover:text-green-500;
+  @apply cursor-pointer hover:text-green-500 bg-gray-100 p-2 rounded-lg;
 }
 
 .header-2 {

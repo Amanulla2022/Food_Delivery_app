@@ -25,7 +25,7 @@ const Cart = () => {
 
   return (
     <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 flex justify-end item-end">
-      <div className="bg-white p-4  shadow-md w-3/5 z-50 relative overflow-auto">
+      <div className="bg-white p-4  shadow-md w-full md:w-3/5 z-50 relative overflow-auto">
         <Link
           to="/categories"
           className="absolute top-2 right-2 text-3xl text-gray-600 hover:text-gray-800"

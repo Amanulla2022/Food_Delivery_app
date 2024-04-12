@@ -27,8 +27,8 @@ const SignIn = () => {
   };
 
   return (
-    <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 flex justify-center items-center">
-      <div className="bg-white p-4 rounded-lg shadow-md z-50 relative">
+    <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 flex justify-center items-center ">
+      <div className="bg-white p-4 rounded-lg shadow-md z-50 w-full h-full md:h-auto md:w-auto relative">
         <Link
           to="/"
           className="absolute top-2 right-2 bg-none border-none cursor-pointer text-base text-gray-700"

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import TextInput from "../../components/order/TextInput";
 import { useCart } from "../../context/CartContext";
 import { GrLinkNext } from "react-icons/gr";
+import { Link } from "react-router-dom";
+import { FaTasks } from "react-icons/fa";
 
 const OrderDetails = () => {
   const { getTotalPrice } = useCart();
@@ -38,7 +40,7 @@ const OrderDetails = () => {
   });
 
   useEffect(() => {
-    const storedFormData = localStorage.getItem("orderFormData");
+    const storedFormData = sessionStorage.getItem("orderFormData");
     if (storedFormData) {
       setFormData(JSON.parse(storedFormData));
     }
@@ -46,6 +48,7 @@ const OrderDetails = () => {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
+    console.log(value);
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
@@ -53,19 +56,28 @@ const OrderDetails = () => {
   };
 
   const handlePlaceOrder = () => {
-    localStorage.removeItem("orderFormData");
+    console.log(formData);
     alert("Your order has been placed successfully!");
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    localStorage.setItem("orderFormData", JSON.stringify(formData));
+    sessionStorage.setItem("orderFormData", JSON.stringify(formData));
+    sessionStorage.setItem("paidAmount", JSON.stringify(grandTotal));
     handlePlaceOrder();
   };
 
   return (
     <div className="bg-gray-100 px-8 py-6 rounded-lg shadow-md">
-      <h2 className="text-3xl font-semibold mb-6 underline">Order Details</h2>
+      <div className="flex justify-between">
+        <h2 className="text-3xl font-semibold mb-6 underline">Order Details</h2>
+        <Link
+          to="/summary"
+          className="mt-8 flex align-middle justify-center items-center gap-4 bg-green-300 text-xl text-purple-400 hover:bg-white font-bold p-2"
+        >
+          Check Order Summary <FaTasks />
+        </Link>
+      </div>
       <form onSubmit={handleSubmit}>
         <div className="flex flex-col md:flex-row justify-between">
           <div className="w-full md:w-1/2 md:pr-4">
@@ -201,7 +213,10 @@ const OrderDetails = () => {
                 </button>
               </div>
             ) : (
-              <p className="text-lg">No items added to cart.</p>
+              <>
+                {" "}
+                <p className="text-lg">No items added to cart.</p>
+              </>
             )}
           </div>
         </div>

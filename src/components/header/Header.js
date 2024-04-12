@@ -3,7 +3,7 @@ import logo from "../../images/food_logo.png";
 import { FaCartShopping } from "react-icons/fa6";
 import { HiViewList } from "react-icons/hi";
 import { GrClose } from "react-icons/gr";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom"; // Import useLocation
 import { auth } from "../../firebase/Firebase";
 import { useCart } from "./../../context/CartContext";
 
@@ -11,6 +11,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [user, setUser] = useState(null);
   const { getTotalItemCount } = useCart();
+  const location = useLocation(); // Get current location
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
@@ -56,13 +57,28 @@ const Header = () => {
                 isOpen ? "flex" : "hidden"
               } flex-col ml-4 md:flex-row space-y-2 md:space-y-0 md:space-x-6`}
             >
-              <Link to="/" className="list-item">
+              <Link
+                to="/"
+                className={`list-item ${
+                  location.pathname === "/" && "text-green-500"
+                }`}
+              >
                 Home
               </Link>
-              <Link to="/categories" className="list-item">
+              <Link
+                to="/categories"
+                className={`list-item  ${
+                  location.pathname === "/categories" && "text-green-500"
+                }`}
+              >
                 Categories
               </Link>
-              <Link to="/order" className="list-item">
+              <Link
+                to="/order"
+                className={`list-item ${
+                  location.pathname === "/order" && "text-green-500"
+                }`}
+              >
                 Orders
               </Link>
             </ul>

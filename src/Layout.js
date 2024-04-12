@@ -9,6 +9,7 @@ import SignUp from "./pages/signUp/SignUp";
 import Cart from "./pages/cart/Cart";
 import OrderDetails from "./pages/order/OrderDetails";
 import PageNoTFound from "./pages/not_a_page/PageNoTFound";
+import OrderSummary from "./pages/order/OrderSummary";
 
 const Layout = () => {
   return (
@@ -21,6 +22,7 @@ const Layout = () => {
         <Route path="/signup" element={<SignUp />}></Route>
         <Route path="/cart" element={<Cart />}></Route>
         <Route path="/order" element={<OrderDetails />}></Route>
+        <Route path="/summary" element={<OrderSummary />}></Route>
         <Route path="*" element={<PageNoTFound />}></Route>
       </Routes>
       <Footer />
