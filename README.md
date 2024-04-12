@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# Food Delivery App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple e-commerce application built using React.js. It allows users to browse through products, add them to the cart, and proceed to checkout. The application also includes authentication functionality using Firebase authentication.
 
-## Available Scripts
+## [Hosted_Link](https://food-delivery-app-ruby-seven.vercel.app/)
 
-In the project directory, you can run:
+## Project Structure
+The project structure is organized as follows:
+src/: Contains all the source code for the application.
+components/: Reusable UI components used throughout the app.
+context/: Context providers for managing global state.
+pages/: Top-level pages of the application.
+firebase/: Firebase configuration and authentication setup.
+images/: Image assets used in the application.
+data/: Static data files for menu items.
+App.js: Main entry point of the application.
+Layout.js: Layout component containing header, footer, and routing setup.
 
-### `npm start`
+## Features
+User Authentication: Users can sign up for an account or log in using their email and password.
+Browse Categories: Users can explore various food categories to find their desired items.
+Shopping Cart: Users can add items to their shopping cart and view their cart contents.
+Order Placement: Users can proceed to checkout and place orders, providing delivery information.
+Order Summary: Users can view a summary of their placed orders and payment information.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Pages
+Home: Landing page of the application, displaying featured products and promotions.
+Categories: Page displaying different product categories. Users can browse products within each category.
+ProductDetail: Page displaying details of a specific product.
+OrderDetails: Page for entering delivery information and placing orders.
+OrderSummary: Page displaying order summary and payment information.
+PageNotFound: Page displayed when a route is not found.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+##### Context
+CartContext: Context provider for managing the shopping cart state.
 
-### `npm test`
+###### Dependencies
+react: JavaScript library for building user interfaces.
+react-router-dom: React router library for handling routing.
+firebase: Firebase SDK for authentication.
+react-icons: Library providing icons for React applications.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+###### Technologies Used
+React: Frontend framework for building the user interface.
+React Router: For handling client-side routing.
+Firebase: Backend service for authentication and data storage.
+Tailwind CSS: Utility-first CSS framework for styling.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+##### Usage
+Explore featured products and promotions on the Home page.
+Navigate to different product categories using the Categories page.
+Click on a product to view its details on the ProductDetail page.
+Add products to the cart and proceed to checkout.
+Sign in or sign up to manage your account and view order history.
